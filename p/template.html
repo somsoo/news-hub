@@ -11,7 +11,7 @@
     <meta property="og:type" content="article">
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     
-    <!-- Google AdSense Auto Ads -->
+    <!-- Google AdSense Library Loader -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106" crossorigin="anonymous"></script>
 
     <style>
@@ -20,7 +20,7 @@
         header { background: #0f172a; color: white; padding: 14px 18px; text-align: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
         .logo { font-size: 1.1rem; font-weight: 800; letter-spacing: -0.5px; color: #f8fafc; text-decoration: none; }
         .logo span { color: #f43f5e; }
-        .container { max-width: 600px; margin: 0 auto; padding: 18px 16px 40px; }
+        .container { max-width: 600px; margin: 0 auto; padding: 16px 14px 40px; }
         
         .article-card { background: white; border-radius: 16px; padding: 22px 18px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid #e2e8f0; }
         .badge-bar { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
@@ -29,15 +29,15 @@
         
         .article-title { font-size: 1.35rem; font-weight: 800; color: #0f172a; line-height: 1.45; letter-spacing: -0.5px; margin-bottom: 14px; word-break: keep-all; }
         
+        /* Ad Containers */
+        .ad-box { margin: 18px auto; text-align: center; overflow: hidden; min-height: 80px; width: 100%; }
+        
         /* Summary Box */
-        .summary-box { background: #f1f5f9; border-left: 4px solid #3b82f6; border-radius: 0 10px 10px 0; padding: 14px 14px; margin-bottom: 22px; }
+        .summary-box { background: #f1f5f9; border-left: 4px solid #3b82f6; border-radius: 0 10px 10px 0; padding: 14px 14px; margin: 18px 0; }
         .summary-box h3 { font-size: 0.9rem; font-weight: 800; color: #1e40af; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
         .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 6px; }
         .summary-box li { font-size: 0.92rem; color: #334155; line-height: 1.5; padding-left: 14px; position: relative; word-break: keep-all; }
         .summary-box li::before { content: "•"; position: absolute; left: 0; color: #3b82f6; font-weight: bold; }
-        
-        /* Ad Banner Container */
-        .ad-slot-middle { margin: 24px auto; text-align: center; overflow: hidden; min-height: 100px; }
         
         /* Blur Section */
         .blur-container { position: relative; margin-top: 20px; padding: 18px 16px; border-radius: 12px; background: #fafafa; border: 1px dashed #cbd5e1; overflow: hidden; }
@@ -46,7 +46,7 @@
         
         /* CTA Button Overlay */
         .cta-overlay { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; background: rgba(255,255,255,0.7); backdrop-filter: blur(2px); padding: 16px; }
-        .cta-btn { display: inline-flex; align-items: center; justify-content: center; width: 90%; max-width: 320px; padding: 15px 20px; background: linear-style; background: linear-gradient(135deg, #2563eb, #1d4ed8); color: white; text-decoration: none; font-size: 1rem; font-weight: 800; border-radius: 12px; box-shadow: 0 4px 15px rgba(37,99,235,0.4); transition: transform 0.15s ease; letter-spacing: -0.3px; }
+        .cta-btn { display: inline-flex; align-items: center; justify-content: center; width: 92%; max-width: 320px; padding: 15px 20px; background: linear-gradient(135deg, #2563eb, #1d4ed8); color: white; text-decoration: none; font-size: 1rem; font-weight: 800; border-radius: 12px; box-shadow: 0 4px 15px rgba(37,99,235,0.4); transition: transform 0.15s ease; letter-spacing: -0.3px; }
         .cta-btn:active { transform: scale(0.97); }
         .cta-hint { font-size: 0.75rem; color: #64748b; margin-top: 8px; font-weight: 500; }
         
@@ -69,6 +69,19 @@
             </div>
             
             <h1 class="article-title">{{TITLE}}</h1>
+
+            <!-- [수동 광고 1] 본문 상단 배너 (9807209388) -->
+            <div class="ad-box ad-top">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-2228289204702106"
+                     data-ad-slot="9807209388"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
             
             <!-- AI 3-Line Summary -->
             <div class="summary-box">
@@ -80,12 +93,12 @@
                 </ul>
             </div>
             
-            <!-- Google AdSense Display Unit (Middle) -->
-            <div class="ad-slot-middle">
+            <!-- [수동 광고 2] 본문 중단 골든존 배너 (4854231186) -->
+            <div class="ad-box ad-middle">
                 <ins class="adsbygoogle"
                      style="display:block"
                      data-ad-client="ca-pub-2228289204702106"
-                     data-ad-slot="5979106011"
+                     data-ad-slot="4854231186"
                      data-ad-format="auto"
                      data-full-width-responsive="true"></ins>
                 <script>
@@ -107,6 +120,19 @@
                 </div>
             </div>
             
+            <!-- [수동 광고 3] 본문 하단 배너 (1633205896) -->
+            <div class="ad-box ad-bottom">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-2228289204702106"
+                     data-ad-slot="1633205896"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+
             <!-- Source Notice -->
             <div class="source-box">
                 출처: <strong>{{SOURCE_NAME}}</strong> 보도 인용 &bull; 
