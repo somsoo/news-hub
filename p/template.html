@@ -54,6 +54,15 @@
         .source-box { margin-top: 24px; padding-top: 14px; border-top: 1px solid #f1f5f9; font-size: 0.8rem; color: #94a3b8; text-align: center; }
         .source-box a { color: #64748b; text-decoration: underline; }
         
+
+        /* Share Button */
+        .share-bar { display: flex; align-items: center; gap: 10px; margin: 16px 0 4px; }
+        .share-btn { display: inline-flex; align-items: center; gap: 7px; padding: 10px 20px; background: #0f172a; color: white; border: none; border-radius: 10px; font-size: 0.95rem; font-weight: 700; cursor: pointer; transition: background 0.15s, transform 0.1s; letter-spacing: -0.3px; }
+        .share-btn:hover { background: #1e293b; }
+        .share-btn:active { transform: scale(0.97); }
+        .share-btn svg { width: 18px; height: 18px; fill: white; flex-shrink: 0; }
+        .copy-toast { font-size: 0.82rem; color: #22c55e; font-weight: 600; opacity: 0; transition: opacity 0.3s; }
+        .copy-toast.show { opacity: 1; }
         footer { text-align: center; padding: 30px 16px; font-size: 0.75rem; color: #94a3b8; line-height: 1.6; }
     </style>
 </head>
@@ -70,6 +79,15 @@
             
             <h1 class="article-title">{{TITLE}}</h1>
 
+
+            <!-- Share Button -->
+            <div class="share-bar">
+                <button class="share-btn" onclick="shareArticle()">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg>
+                    이 뉴스 공유하기
+                </button>
+                <span class="copy-toast" id="copyToast">링크 복사됨!</span>
+            </div>
             <!-- [수동 광고 1] 본문 상단 배너 (9807209388) -->
             <div class="ad-box ad-top">
                 <ins class="adsbygoogle"
@@ -144,5 +162,26 @@
         <p>&copy; 2026 ISSUE HUB. All rights reserved.</p>
         <p>본 페이지는 사실 확인을 돕기 위해 AI 요약 정보와 언론사 원문 링크를 제공합니다.</p>
     </footer>
+
+    <script>
+        async function shareArticle() {
+            const title = document.querySelector('.article-title')?.innerText || document.title;
+            const url = window.location.href;
+            if (navigator.share) {
+                try {
+                    await navigator.share({ title: title, url: url });
+                } catch(e) { /* 사용자가 취소 */ }
+            } else {
+                try {
+                    await navigator.clipboard.writeText(url);
+                    const toast = document.getElementById('copyToast');
+                    toast.classList.add('show');
+                    setTimeout(() => toast.classList.remove('show'), 2000);
+                } catch(e) {
+                    prompt('아래 링크를 복사하세요:', url);
+                }
+            }
+        }
+    </script>
 </body>
 </html>
