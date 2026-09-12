@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구형 반도체 대반전, 주문 2배 폭주 | ISSUE HUB</title>
+    <meta name="description" content="최근 DB하이텍의 주가가 한 달 새 21% 급등했습니다. 구형 반도체 수요가 급증하며 주문이 2배로 폭주했습니다.">
+    <!-- OpenGraph -->
+    <meta property="og:title" content="구형 반도체 대반전, 주문 2배 폭주">
+    <meta property="og:description" content="최근 DB하이텍의 주가가 한 달 새 21% 급등했습니다. 구형 반도체 수요가 급증하며 주문이 2배로 폭주했습니다.">
+    <meta property="og:type" content="article">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    
+    <!-- Google AdSense Library Loader -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106" crossorigin="anonymous"></script>
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif; }
+        body { background-color: #f8fafc; color: #1e293b; line-height: 1.7; }
+        header { background: #0f172a; color: white; padding: 14px 18px; text-align: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .logo { font-size: 1.1rem; font-weight: 800; letter-spacing: -0.5px; color: #f8fafc; text-decoration: none; }
+        .logo span { color: #f43f5e; }
+        .container { max-width: 620px; margin: 0 auto; padding: 16px 14px 40px; }
+        
+        .article-card { background: white; border-radius: 16px; padding: 24px 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid #e2e8f0; }
+        .badge-bar { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+        .badge-live { background: #fee2e2; color: #e11d48; font-size: 0.75rem; font-weight: 800; padding: 3px 8px; border-radius: 6px; }
+        .badge-time { font-size: 0.8rem; color: #94a3b8; }
+        
+        .article-title { font-size: 1.35rem; font-weight: 800; color: #0f172a; line-height: 1.45; letter-spacing: -0.5px; margin-bottom: 14px; word-break: keep-all; }
+        
+        /* Share Button */
+        .share-bar { display: flex; align-items: center; gap: 10px; margin: 14px 0 16px; }
+        .share-btn { display: inline-flex; align-items: center; gap: 7px; padding: 9px 18px; background: #0f172a; color: white; border: none; border-radius: 10px; font-size: 0.9rem; font-weight: 700; cursor: pointer; transition: background 0.15s, transform 0.1s; letter-spacing: -0.3px; }
+        .share-btn:hover { background: #1e293b; }
+        .share-btn:active { transform: scale(0.97); }
+        .share-btn svg { width: 17px; height: 17px; fill: white; flex-shrink: 0; }
+        .copy-toast { font-size: 0.82rem; color: #22c55e; font-weight: 600; opacity: 0; transition: opacity 0.3s; }
+        .copy-toast.show { opacity: 1; }
+
+        /* Summary Box */
+        .summary-box { background: #f8fafc; border-left: 4px solid #2563eb; border-radius: 0 12px 12px 0; padding: 16px; margin: 16px 0; border-top: 1px solid #e2e8f0; border-right: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; }
+        .summary-box h3 { font-size: 0.95rem; font-weight: 800; color: #1e40af; margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+        .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .summary-box li { font-size: 0.92rem; color: #334155; line-height: 1.55; padding-left: 14px; position: relative; word-break: keep-all; }
+        .summary-box li::before { content: "•"; position: absolute; left: 0; color: #2563eb; font-weight: bold; }
+        
+        /* Ad Containers */
+        .ad-box { margin: 20px auto; text-align: center; overflow: hidden; min-height: 80px; width: 100%; border-radius: 10px; }
+        
+        /* Detail Content Sections (체류시간 & 고단가 매칭) */
+        .detail-section { margin-top: 20px; }
+        .section-title { font-size: 1rem; font-weight: 800; color: #0f172a; margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+        .detail-content { font-size: 0.94rem; color: #334155; line-height: 1.75; background: #ffffff; padding: 14px 16px; border-radius: 12px; border: 1px solid #e2e8f0; word-break: keep-all; }
+        .detail-content p { margin-bottom: 8px; }
+        .detail-content p:last-child { margin-bottom: 0; }
+        
+        /* CTA Button */
+        .cta-box { margin-top: 24px; text-align: center; }
+        .cta-btn { display: inline-flex; align-items: center; justify-content: center; width: 100%; max-width: 380px; padding: 15px 22px; background: linear-gradient(135deg, #1e40af, #2563eb); color: white; text-decoration: none; font-size: 1rem; font-weight: 800; border-radius: 12px; box-shadow: 0 4px 16px rgba(37,99,235,0.3); transition: transform 0.15s ease, box-shadow 0.15s ease; letter-spacing: -0.3px; }
+        .cta-btn:active { transform: scale(0.98); }
+        .cta-hint { display: block; font-size: 0.78rem; color: #64748b; margin-top: 8px; font-weight: 500; }
+        
+        /* Source Citation */
+        .source-box { margin-top: 26px; padding-top: 16px; border-top: 1px solid #f1f5f9; font-size: 0.8rem; color: #94a3b8; text-align: center; }
+        .source-box a { color: #64748b; text-decoration: underline; }
+        
+        footer { text-align: center; padding: 30px 16px; font-size: 0.75rem; color: #94a3b8; line-height: 1.6; }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/" class="logo">⚡ ISSUE<span>HUB</span></a>
+    </header>
+    <div class="container">
+        <article class="article-card">
+            <div class="badge-bar">
+                <span class="badge-live">1분 핵심 브리핑</span>
+                <span class="badge-time">2026.09.12 22:01</span>
+            </div>
+            
+            <h1 class="article-title">구형 반도체 대반전, 주문 2배 폭주</h1>
+
+            <!-- Share Button -->
+            <div class="share-bar">
+                <button class="share-btn" onclick="shareArticle()">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92z"/></svg>
+                    이 뉴스 공유하기
+                </button>
+                <span class="copy-toast" id="copyToast">링크 복사됨!</span>
+            </div>
+
+            <!-- 1. 핵심 3줄 브리핑 -->
+            <div class="summary-box">
+                <h3>📌 핵심 3줄 브리핑</h3>
+                <ul>
+                    <li>최근 DB하이텍의 주가가 한 달 새 21% 급등했습니다.</li>
+                    <li>구형 반도체 수요가 급증하며 주문이 2배로 폭주했습니다.</li>
+                    <li>과소평가되던 성숙 공정의 가치가 새롭게 재조명받고 있습니다.</li>
+                </ul>
+            </div>
+            
+            <!-- [수동 광고 1] 본문 중단 골든존 배너 (4854231186) -->
+            <div class="ad-box ad-middle">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-2228289204702106"
+                     data-ad-slot="4854231186"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            
+            <!-- 2. 사건 배경 및 핵심 쟁점 (체류시간 & 고단가 매칭 해설) -->
+            <div class="detail-section">
+                <h3 class="section-title">🔍 사건 배경 및 핵심 쟁점</h3>
+                <div class="detail-content">
+                    첨단 미세 공정에 밀려 그동안 저평가받던 구형 8인치 파운드리 반도체의 수요가 급증하고 있습니다. 가전과 자동차 등 다양한 산업에서 가성비 높은 성숙 공정 반도체를 찾으면서 DB하이텍에 주문이 몰린 것입니다. 이번 주가 급등은 시장의 고정관념을 깨는 반전으로 주목받고 있습니다.
+                </div>
+            </div>
+
+            <!-- 3. 향후 전망 및 공식 입장 -->
+            <div class="detail-section" style="margin-top: 18px;">
+                <h3 class="section-title">💬 향후 전망 및 공식 입장</h3>
+                <div class="detail-content">
+                    업계에서는 당분간 구형 반도체 품귀 현상과 함께 관련 기업들의 실적 개선세가 이어질 것으로 전망합니다. 향후 안정적인 수주 물량 확보가 주가 추가 상승의 열쇠가 될 것입니다.
+                </div>
+            </div>
+            
+            <!-- [수동 광고 2] 본문 하단 배너 (1633205896) -->
+            <div class="ad-box ad-bottom">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-2228289204702106"
+                     data-ad-slot="1633205896"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+
+            <!-- 공식 원문 기사 바로가기 (전면광고 작동 포인트) -->
+            <div class="cta-box">
+                <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE01SXcyMXdvTFh0NHhwdW9SZlVQZlhPZFUzeUx4SjNkVzY3OTlVVFBiemhvU0tmMWkzQ09IaWVVWUl0dGFZOUJuMko4eHIzOFE?oc=5" target="_blank" rel="noopener noreferrer" class="cta-btn">
+                    📰 v.daum.net 공식 보도 전문 확인하기 👉
+                </a>
+                <span class="cta-hint">공식 언론사 원문 기사 페이지로 연결됩니다</span>
+            </div>
+
+            <!-- Source Notice -->
+            <div class="source-box">
+                출처: <strong>v.daum.net</strong> 보도 인용 &bull; 
+                <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE01SXcyMXdvTFh0NHhwdW9SZlVQZlhPZFUzeUx4SjNkVzY3OTlVVFBiemhvU0tmMWkzQ09IaWVVWUl0dGFZOUJuMko4eHIzOFE?oc=5" target="_blank" rel="noopener noreferrer">원문 기사 보기</a>
+            </div>
+        </article>
+    </div>
+    <footer>
+        <p>&copy; 2026 ISSUE HUB. All rights reserved.</p>
+        <p>본 페이지는 사실 확인을 돕기 위해 AI 요약 정보와 언론사 원문 링크를 제공합니다.</p>
+    </footer>
+
+    <script>
+        async function shareArticle() {
+            const title = document.querySelector('.article-title')?.innerText || document.title;
+            const url = window.location.href;
+            if (navigator.share) {
+                try {
+                    await navigator.share({ title: title, url: url });
+                } catch(e) { /* 취소 */ }
+            } else {
+                try {
+                    await navigator.clipboard.writeText(url);
+                    const toast = document.getElementById('copyToast');
+                    toast.classList.add('show');
+                    setTimeout(() => toast.classList.remove('show'), 2000);
+                } catch(e) {
+                    prompt('아래 링크를 복사하세요:', url);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
