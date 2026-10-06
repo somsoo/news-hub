@@ -55,11 +55,17 @@
         .detail-content p { margin-bottom: 8px; }
         .detail-content p:last-child { margin-bottom: 0; }
         
-        /* CTA Button */
-        .cta-box { margin-top: 24px; text-align: center; }
-        .cta-btn { display: inline-flex; align-items: center; justify-content: center; width: 100%; max-width: 380px; padding: 15px 22px; background: linear-gradient(135deg, #1e40af, #2563eb); color: white; text-decoration: none; font-size: 1rem; font-weight: 800; border-radius: 12px; box-shadow: 0 4px 16px rgba(37,99,235,0.3); transition: transform 0.15s ease, box-shadow 0.15s ease; letter-spacing: -0.3px; }
-        .cta-btn:active { transform: scale(0.98); }
-        .cta-hint { display: block; font-size: 0.78rem; color: #64748b; margin-top: 8px; font-weight: 500; }
+                /* Related Hot Issues (전면광고 트리거 내부 링크 카드) */
+        .related-issues-container { margin-top: 24px; padding-top: 20px; border-top: 1px solid #e2e8f0; }
+        .related-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+        .related-badge { background: #fee2e2; color: #e11d48; font-size: 0.8rem; font-weight: 800; padding: 4px 10px; border-radius: 6px; }
+        .related-sub { font-size: 0.78rem; color: #64748b; font-weight: 600; }
+        .related-cards-list { display: flex; flex-direction: column; gap: 10px; }
+        .related-card-item { display: flex; align-items: center; justify-content: space-between; padding: 14px 16px; background: #ffffff; border: 1.5px solid #e2e8f0; border-radius: 12px; text-decoration: none; color: inherit; transition: all 0.15s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
+        .related-card-item:hover, .related-card-item:active { background: #f8fafc; border-color: #2563eb; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(37,99,235,0.08); }
+        .related-card-title { font-size: 0.95rem; font-weight: 700; color: #0f172a; line-height: 1.45; word-break: keep-all; flex: 1; padding-right: 12px; }
+        .related-card-arrow { color: #2563eb; font-weight: 800; font-size: 1.1rem; flex-shrink: 0; }
+        .related-loading { font-size: 0.82rem; color: #94a3b8; text-align: center; padding: 12px 0; }
         
         /* Source Citation */
         .source-box { margin-top: 26px; padding-top: 16px; border-top: 1px solid #f1f5f9; font-size: 0.8rem; color: #94a3b8; text-align: center; }
@@ -181,6 +187,63 @@
                 }
             }
         }
+    </script>
+    <script>
+        // 메인 페이지의 최신 핫이슈를 비동기 로드하여 내부 링크 카드 주입 (전면광고 발동)
+        (function loadRelatedIssues() {
+            fetch('/')
+                .then(r => r.text())
+                .then(html => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(html, 'text/html');
+                    const cards = doc.querySelectorAll('.news-card');
+                    const container = document.getElementById('relatedCardsList');
+                    if (!container) return;
+                    
+                    const currentPath = window.location.pathname;
+                    const items = [];
+                    
+                    for (const card of cards) {
+                        const href = card.getAttribute('href');
+                        const h3 = card.querySelector('h3');
+                        if (!href || !h3) continue;
+                        if (href !== currentPath && href.startsWith('/p/')) {
+                            items.push({
+                                href: href,
+                                title: h3.innerText.trim()
+                            });
+                            if (items.length >= 2) break;
+                        }
+                    }
+                    
+                    if (items.length > 0) {
+                        container.innerHTML = items.map(item => `
+                            <a href="${item.href}" class="related-card-item">
+                                <span class="related-card-title">👉 ${item.title}</span>
+                                <span class="related-card-arrow">➔</span>
+                            </a>
+                        `).join('');
+                    } else {
+                        container.innerHTML = `
+                            <a href="/" class="related-card-item">
+                                <span class="related-card-title">⚡ 실시간 최신 뉴스 전체 목록 보기</span>
+                                <span class="related-card-arrow">➔</span>
+                            </a>
+                        `;
+                    }
+                })
+                .catch(() => {
+                    const container = document.getElementById('relatedCardsList');
+                    if (container) {
+                        container.innerHTML = `
+                            <a href="/" class="related-card-item">
+                                <span class="related-card-title">⚡ 실시간 최신 뉴스 전체 목록 보기</span>
+                                <span class="related-card-arrow">➔</span>
+                            </a>
+                        `;
+                    }
+                });
+        })();
     </script>
 </body>
 </html>
