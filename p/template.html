@@ -155,7 +155,17 @@
                     <span class="related-sub">지금 가장 많이 보고 있는 뉴스</span>
                 </div>
                 <div class="related-cards-list" id="relatedCardsList">
-                    <div class="related-loading">실시간 이슈를 불러오는 중...</div>
+                    <a href="/p/issue_1791284556.html" class="related-card-item">
+                        <span class="related-card-title">👉 서울 아파트 매물 7만건 돌파, 비강남권 확산</span>
+                        <span class="related-card-arrow">➔</span>
+                    </a>
+                    <a href="/p/issue_1791284519.html" class="related-card-item">
+                        <span class="related-card-title">👉 김정관 “호남 반도체 클러스터, 기업이 최종 결정”</span>
+                        <span class="related-card-arrow">➔</span>
+                    </a>
+                    <a href="/" class="related-more-link" style="text-align: center; font-size: 0.82rem; color: #64748b; font-weight: 600; text-decoration: none; padding-top: 6px; display: block;">
+                        ⚡ 실시간 최신 뉴스 전체 목록 보기 ➔
+                    </a>
                 </div>
             </div>
 
@@ -224,27 +234,14 @@
                                 <span class="related-card-title">👉 ${item.title}</span>
                                 <span class="related-card-arrow">➔</span>
                             </a>
-                        `).join('');
-                    } else {
-                        container.innerHTML = `
-                            <a href="/" class="related-card-item">
-                                <span class="related-card-title">⚡ 실시간 최신 뉴스 전체 목록 보기</span>
-                                <span class="related-card-arrow">➔</span>
+                        `).join('') + `
+                            <a href="/" class="related-more-link" style="text-align: center; font-size: 0.82rem; color: #64748b; font-weight: 600; text-decoration: none; padding-top: 6px; display: block;">
+                                ⚡ 실시간 최신 뉴스 전체 목록 보기 ➔
                             </a>
                         `;
                     }
                 })
-                .catch(() => {
-                    const container = document.getElementById('relatedCardsList');
-                    if (container) {
-                        container.innerHTML = `
-                            <a href="/" class="related-card-item">
-                                <span class="related-card-title">⚡ 실시간 최신 뉴스 전체 목록 보기</span>
-                                <span class="related-card-arrow">➔</span>
-                            </a>
-                        `;
-                    }
-                });
+                .catch(() => {});
         })();
     </script>
 </body>

@@ -148,12 +148,25 @@
                 </script>
             </div>
 
-            <!-- 공식 원문 기사 바로가기 (전면광고 작동 포인트) -->
-            <div class="cta-box">
-                <a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE5UcXFTTENiRmJFQ0NJM0FxYW9jYkFmZW9wTnJuWVJIOUkwLU9UOWdDMlNfZ0Rfc3B5OTJPbVRnMmhYUFdSbGg0VXdxUTFKcFZnXzJYTDRVYW9FREHSAWBBVV95cUxOZE41bmhxTHFkSjl4NWYwVmFXUm5BbGQwQkYtZHhMTmhHZWtocElwSExOWFZtcDJiaVVZdHRuTkFWdDhfWmpjaFRqZmk5akZkT1N1bFNHdTVkRlFqZXg0a0U?oc=5" target="_blank" rel="noopener noreferrer" class="cta-btn">
-                    📰 yna.co.kr 공식 보도 전문 확인하기 👉
-                </a>
-                <span class="cta-hint">공식 언론사 원문 기사 페이지로 연결됩니다</span>
+            <!-- 실시간 화제의 다른 이슈 추천 (내부 링크 이동으로 구글 전면 광고 발동) -->
+            <div class="related-issues-container">
+                <div class="related-header">
+                    <span class="related-badge">🔥 실시간 화제의 이슈</span>
+                    <span class="related-sub">지금 가장 많이 보고 있는 뉴스</span>
+                </div>
+                <div class="related-cards-list" id="relatedCardsList">
+                    <a href="/p/issue_1791291810.html" class="related-card-item">
+                        <span class="related-card-title">👉 산업장관 대미 투자 발언, 국익이 최우선</span>
+                        <span class="related-card-arrow">➔</span>
+                    </a>
+                    <a href="/p/issue_1791284556.html" class="related-card-item">
+                        <span class="related-card-title">👉 서울 아파트 매물 7만건 돌파, 비강남권 확산</span>
+                        <span class="related-card-arrow">➔</span>
+                    </a>
+                    <a href="/" class="related-more-link" style="text-align: center; font-size: 0.82rem; color: #64748b; font-weight: 600; text-decoration: none; padding-top: 6px; display: block;">
+                        ⚡ 실시간 최신 뉴스 전체 목록 보기 ➔
+                    </a>
+                </div>
             </div>
 
             <!-- Source Notice -->
@@ -189,7 +202,7 @@
         }
     </script>
     <script>
-        // 메인 페이지의 최신 핫이슈를 비동기 로드하여 내부 링크 카드 주입 (전면광고 발동)
+        // 메인 페이지의 최신 핫이슈를 비동기 로드하여 내부 링크 카드 갱신 (전면광고 발동)
         (function loadRelatedIssues() {
             fetch('/')
                 .then(r => r.text())
@@ -222,27 +235,14 @@
                                 <span class="related-card-title">👉 ${item.title}</span>
                                 <span class="related-card-arrow">➔</span>
                             </a>
-                        `).join('');
-                    } else {
-                        container.innerHTML = `
-                            <a href="/" class="related-card-item">
-                                <span class="related-card-title">⚡ 실시간 최신 뉴스 전체 목록 보기</span>
-                                <span class="related-card-arrow">➔</span>
+                        `).join('') + `
+                            <a href="/" class="related-more-link" style="text-align: center; font-size: 0.82rem; color: #64748b; font-weight: 600; text-decoration: none; padding-top: 6px; display: block;">
+                                ⚡ 실시간 최신 뉴스 전체 목록 보기 ➔
                             </a>
                         `;
                     }
                 })
-                .catch(() => {
-                    const container = document.getElementById('relatedCardsList');
-                    if (container) {
-                        container.innerHTML = `
-                            <a href="/" class="related-card-item">
-                                <span class="related-card-title">⚡ 실시간 최신 뉴스 전체 목록 보기</span>
-                                <span class="related-card-arrow">➔</span>
-                            </a>
-                        `;
-                    }
-                });
+                .catch(() => {});
         })();
     </script>
 </body>
