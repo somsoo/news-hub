@@ -5,13 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{TITLE}} | ISSUE HUB</title>
     <meta name="description" content="{{DESCRIPTION}}">
+    <!-- Google SEO & Discover Optimization -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="{{CANONICAL_URL}}">
     <!-- OpenGraph -->
     <meta property="og:title" content="{{TITLE}}">
     <meta property="og:description" content="{{DESCRIPTION}}">
     <meta property="og:type" content="article">
+    <meta property="og:url" content="{{CANONICAL_URL}}">
     <meta property="og:image" content="{{IMAGE_URL}}">
+    <meta property="og:site_name" content="ISSUE HUB">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{TITLE}}">
+    <meta name="twitter:description" content="{{DESCRIPTION}}">
+    <meta name="twitter:image" content="{{IMAGE_URL}}">
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    
+    <!-- Schema.org NewsArticle 구조화 데이터 (구글 리치 스니펫) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": "{{TITLE}}",
+      "description": "{{DESCRIPTION}}",
+      "image": ["{{IMAGE_URL}}"],
+      "datePublished": "{{ISO_DATE}}",
+      "dateModified": "{{ISO_DATE}}",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{CANONICAL_URL}}"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "{{SOURCE_NAME}}"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ISSUE HUB",
+        "url": "https://news.enjoy-onepage.com"
+      }
+    }
+    </script>
     
     <!-- 애드센스 완전 제거 (뉴스픽 정책 준수 및 클릭 전환 극대화) -->
 
