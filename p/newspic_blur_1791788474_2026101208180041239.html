@@ -2,8 +2,8 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>야구장서 볼보이한테 장비 집어던진 스타, 결국? | ISSUE HUB</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>야구장서 볼보이한테 장비 집어던진 스타, 결국?</title>
     <meta name="description" content="야구장서 볼보이한테 장비 집어던진 스타, 결국?">
     <!-- Google SEO & Discover Optimization -->
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -21,7 +21,7 @@
     <meta name="twitter:image" content="https://images-cdn.newspic.kr/thumb3/2026/10/11/435385d7-066b-40b2-ad97-43d7931ff19f.jpg">
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     
-    <!-- Schema.org NewsArticle 구조화 데이터 -->
+    <!-- Schema.org NewsArticle -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -29,8 +29,8 @@
       "headline": "야구장서 볼보이한테 장비 집어던진 스타, 결국?",
       "description": "야구장서 볼보이한테 장비 집어던진 스타, 결국?",
       "image": ["https://images-cdn.newspic.kr/thumb3/2026/10/11/435385d7-066b-40b2-ad97-43d7931ff19f.jpg"],
-      "datePublished": "2026-10-12T16:01:15.323493",
-      "dateModified": "2026-10-12T16:01:15.323493",
+      "datePublished": "2026-10-12T00:00:00",
+      "dateModified": "2026-10-12T00:00:00",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://news.enjoy-onepage.com/p/newspic_blur_1791788474_2026101208180041239.html"
@@ -46,192 +46,111 @@
       }
     }
     </script>
-    
-    <!-- 애드센스 완전 제거 (뉴스픽 정책 준수 및 클릭 전환 극대화) -->
 
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif; }
-        body { background-color: #f8fafc; color: #1e293b; line-height: 1.75; padding-bottom: 75px; }
-        header { background: #0f172a; color: white; padding: 14px 18px; text-align: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-        .logo { font-size: 1.1rem; font-weight: 800; letter-spacing: -0.5px; color: #f8fafc; text-decoration: none; }
-        .logo span { color: #f43f5e; }
-        .container { max-width: 620px; margin: 0 auto; padding: 16px 14px 40px; }
+        body { background-color: #f1f5f9; color: #0f172a; line-height: 1.65; padding: 16px 12px 85px; }
         
-        .article-card { background: white; border-radius: 16px; padding: 24px 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid #e2e8f0; }
-        .badge-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
-        .badge-tag { background: #fdf2f8; color: #db2777; font-size: 0.78rem; font-weight: 800; padding: 4px 10px; border-radius: 6px; display: inline-flex; align-items: center; gap: 4px; border: 1px solid #fbcfe8; }
-        .badge-time { font-size: 0.8rem; color: #94a3b8; }
-        
-        .article-title { font-size: 1.35rem; font-weight: 800; color: #0f172a; line-height: 1.45; letter-spacing: -0.5px; margin-bottom: 14px; word-break: keep-all; }
-        
-        /* Thumbnail Image */
-        .thumb-wrap { width: 100%; margin: 12px 0 16px; border-radius: 12px; overflow: hidden; background: #e2e8f0; }
-        .thumb-wrap img { width: 100%; height: auto; max-height: 320px; object-fit: cover; display: block; }
+        /* 초미니멀 모바일 카드 컨테이너 */
+        .card { max-width: 480px; margin: 0 auto; background: #ffffff; border-radius: 20px; padding: 22px 18px 26px; box-shadow: 0 4px 24px rgba(15, 23, 42, 0.08); border: 1px solid #e2e8f0; }
 
-        /* Share Button */
-        .share-bar { display: flex; align-items: center; gap: 10px; margin: 14px 0 18px; }
-        .share-btn { display: inline-flex; align-items: center; gap: 7px; padding: 9px 18px; background: #0f172a; color: white; border: none; border-radius: 10px; font-size: 0.9rem; font-weight: 700; cursor: pointer; transition: background 0.15s, transform 0.1s; letter-spacing: -0.3px; }
-        .share-btn:hover { background: #1e293b; }
-        .share-btn:active { transform: scale(0.97); }
-        .share-btn svg { width: 17px; height: 17px; fill: white; flex-shrink: 0; }
-        .copy-toast { font-size: 0.82rem; color: #22c55e; font-weight: 600; opacity: 0; transition: opacity 0.3s; }
-        .copy-toast.show { opacity: 1; }
+        /* 상단 태그 & 날짜 */
+        .top-meta { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+        .tag-pill { background: #fee2e2; color: #dc2626; font-size: 0.78rem; font-weight: 800; padding: 4px 10px; border-radius: 20px; letter-spacing: -0.2px; }
+        .date-text { font-size: 0.78rem; color: #94a3b8; }
 
-        /* Story Content Area */
-        .story-intro { font-size: 1rem; color: #334155; line-height: 1.8; margin-top: 14px; word-break: keep-all; }
-        .story-intro p { margin-bottom: 14px; }
-        .story-highlight { background: #fffbeb; border-left: 4px solid #f59e0b; padding: 12px 14px; border-radius: 0 10px 10px 0; margin: 16px 0; font-weight: 600; color: #92400e; }
+        /* 헤드라인 */
+        .title { font-size: 1.25rem; font-weight: 800; line-height: 1.4; color: #0f172a; letter-spacing: -0.4px; margin-bottom: 14px; word-break: keep-all; }
 
-        /* [핵심] 블러 가림막 섹션 (Curiosity Gap 극대화) */
-        .spoiler-blur-container { position: relative; margin-top: 20px; border-radius: 14px; overflow: hidden; border: 1.5px dashed #f43f5e; background: #fff1f2; }
-        .blur-backdrop { padding: 20px 18px 70px; filter: blur(5.5px); opacity: 0.55; user-select: none; pointer-events: none; }
-        .blur-backdrop p { font-size: 0.98rem; color: #1e293b; margin-bottom: 10px; line-height: 1.8; word-break: keep-all; }
+        /* 썸네일 이미지 (있을 경우만) */
+        .thumb-box, .thumb-wrap { width: 100%; border-radius: 12px; overflow: hidden; margin-bottom: 14px; background: #f1f5f9; }
+        .thumb-box img, .thumb-wrap img { width: 100%; height: auto; max-height: 260px; object-fit: cover; display: block; }
+
+        /* 초단문 사연 훅 (단 2~3줄로 호기심 극대화) */
+        .story-hook { font-size: 0.98rem; color: #334155; line-height: 1.7; margin-bottom: 18px; word-break: keep-all; background: #f8fafc; padding: 14px 14px; border-radius: 12px; border-left: 3.5px solid #ef4444; }
+
+        /* [핵심] 블러 가림막 섹션 (단 하나의 행동 유도) */
+        .blur-box { position: relative; border-radius: 14px; overflow: hidden; border: 1.5px dashed #f87171; background: #fff1f2; margin-top: 10px; }
+        .blur-text { padding: 18px 14px 60px; filter: blur(5px); opacity: 0.45; user-select: none; pointer-events: none; line-height: 1.75; font-size: 0.94rem; color: #1e293b; }
         
-        .blur-overlay-card { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(255,241,242,0.2) 0%, rgba(255,241,242,0.85) 30%, #fff1f2 85%); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px 18px 20px; text-align: center; }
-        .lock-pill { display: inline-flex; align-items: center; gap: 6px; background: #ffe4e6; color: #e11d48; font-size: 0.78rem; font-weight: 800; padding: 5px 12px; border-radius: 20px; margin-bottom: 10px; border: 1px solid #fecdd3; }
-        .lock-icon { font-size: 0.9rem; }
-        .lock-title { font-size: 1.08rem; font-weight: 900; color: #881337; margin-bottom: 6px; letter-spacing: -0.3px; word-break: keep-all; }
-        .lock-desc { font-size: 0.84rem; color: #9f1239; margin-bottom: 16px; word-break: keep-all; font-weight: 500; }
+        .blur-mask { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(255,241,242,0.2) 0%, rgba(255,241,242,0.85) 25%, #fff1f2 80%); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 18px 14px; text-align: center; }
         
-        /* 언락 CTA 버튼 */
-        .unlock-btn { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; max-width: 380px; background: linear-gradient(135deg, #e11d48 0%, #be123c 100%); color: white; text-decoration: none; font-size: 1.05rem; font-weight: 900; padding: 16px 20px; border-radius: 14px; box-shadow: 0 8px 22px rgba(225,29,72,0.32); transition: transform 0.15s, box-shadow 0.15s; letter-spacing: -0.4px; animation: pulse-btn 2.2s infinite; }
-        .unlock-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(225,29,72,0.42); color: white; }
-        .unlock-btn:active { transform: scale(0.98); }
-        .btn-arrow { font-size: 1.25rem; font-weight: 900; }
-        .unlock-note { font-size: 0.72rem; color: #be123c; margin-top: 10px; opacity: 0.85; }
+        .lock-badge { display: inline-flex; align-items: center; gap: 5px; font-size: 0.76rem; font-weight: 800; color: #be123c; background: #ffe4e6; padding: 4px 10px; border-radius: 20px; margin-bottom: 8px; }
+        .lock-msg { font-size: 0.92rem; font-weight: 800; color: #881337; margin-bottom: 14px; word-break: keep-all; letter-spacing: -0.3px; }
 
-        @keyframes pulse-btn {
-            0% { box-shadow: 0 0 0 0 rgba(225,29,72,0.4); }
-            70% { box-shadow: 0 0 0 12px rgba(225,29,72,0); }
-            100% { box-shadow: 0 0 0 0 rgba(225,29,72,0); }
+        /* 단 하나의 초대형 메인 클릭 버튼 */
+        .btn-unlock { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; max-width: 380px; background: linear-gradient(135deg, #e11d48 0%, #be123c 100%); color: #ffffff !important; text-decoration: none; font-size: 1.05rem; font-weight: 900; padding: 16px 14px; border-radius: 14px; box-shadow: 0 8px 24px rgba(225, 29, 72, 0.35); transition: transform 0.15s, box-shadow 0.15s; letter-spacing: -0.4px; animation: pulse-ring 2s infinite; }
+        .btn-unlock:active { transform: scale(0.97); }
+        .btn-unlock span.arrow { font-size: 1.2rem; }
+
+        @keyframes pulse-ring {
+            0% { box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.45); }
+            70% { box-shadow: 0 0 0 10px rgba(225, 29, 72, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(225, 29, 72, 0); }
         }
 
-        /* Related Hot Issues */
-        .related-issues-container { margin-top: 26px; padding-top: 20px; border-top: 1px solid #e2e8f0; }
-        .related-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
-        .related-badge { background: #fee2e2; color: #e11d48; font-size: 0.8rem; font-weight: 800; padding: 4px 10px; border-radius: 6px; }
-        .related-sub { font-size: 0.78rem; color: #64748b; font-weight: 600; }
-        
-        /* Source Citation & Partner Disclosure */
-        .source-box { margin-top: 24px; padding-top: 14px; border-top: 1px solid #f1f5f9; font-size: 0.82rem; color: #94a3b8; text-align: center; }
-        .source-box a { color: #e11d48; font-weight: 600; text-decoration: underline; }
-        .partner-disclosure { margin-top: 10px; font-size: 0.72rem; color: #94a3b8; text-align: center; line-height: 1.4; }
+        .btn-subtext { font-size: 0.72rem; color: #9f1239; margin-top: 9px; }
 
-        /* Floating Bottom Sticky Bar (Mobile Only) */
-        .sticky-bar { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(15, 23, 42, 0.96); backdrop-filter: blur(8px); padding: 10px 14px; z-index: 99; border-top: 1px solid rgba(255,255,255,0.1); box-shadow: 0 -4px 16px rgba(0,0,0,0.15); display: flex; align-items: center; justify-content: space-between; gap: 10px; }
-        .sticky-info { color: white; font-size: 0.84rem; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; }
-        .sticky-sub { font-size: 0.72rem; color: #fda4af; display: block; font-weight: 500; }
-        .sticky-btn { background: #e11d48; color: white; text-decoration: none; font-size: 0.88rem; font-weight: 800; padding: 10px 18px; border-radius: 8px; flex-shrink: 0; transition: background 0.15s; white-space: nowrap; }
-        .sticky-btn:hover { background: #be123c; }
-        
-        footer { text-align: center; padding: 30px 16px 50px; font-size: 0.75rem; color: #94a3b8; line-height: 1.6; }
+        /* 하단 출처 & 고지 */
+        .footer-note { max-width: 480px; margin: 16px auto 0; text-align: center; font-size: 0.72rem; color: #94a3b8; line-height: 1.5; }
+        .footer-note a { color: #64748b; text-decoration: underline; }
+
+        /* 모바일 하단 단일 고정 바 (뭘 누를지 고민 제로) */
+        .bottom-sticky { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px); padding: 10px 14px 12px; z-index: 999; box-shadow: 0 -4px 16px rgba(0,0,0,0.12); }
+        .sticky-btn-full { display: flex; align-items: center; justify-content: center; gap: 8px; max-width: 480px; margin: 0 auto; background: #e11d48; color: #ffffff !important; text-decoration: none; font-size: 0.98rem; font-weight: 800; padding: 13px 16px; border-radius: 12px; letter-spacing: -0.3px; box-shadow: 0 4px 14px rgba(225,29,72,0.4); }
     </style>
 </head>
 <body>
-    <header>
-        <a href="/" class="logo">⚡ ISSUE<span>HUB</span></a>
-    </header>
-    <div class="container">
-        <article class="article-card">
-            <div class="badge-bar">
-                <span class="badge-tag">🔥 화제의 썰</span>
-                <span class="badge-time">2026-10-12 08:18:00</span>
-            </div>
-            
-            <h1 class="article-title">야구장서 볼보이한테 장비 집어던진 스타, 결국?</h1>
 
-            <div class="thumb-wrap"><img src="https://images-cdn.newspic.kr/thumb3/2026/10/11/435385d7-066b-40b2-ad97-43d7931ff19f.jpg" alt="야구장서 볼보이한테 장비 집어던진 스타, 결국?" loading="lazy"></div>
-
-            <!-- Share Button -->
-            <div class="share-bar">
-                <button class="share-btn" onclick="shareArticle()">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92z"/></svg>
-                    이 사연 공유하기
-                </button>
-                <span class="copy-toast" id="copyToast">링크 복사됨!</span>
-            </div>
-
-            <!-- 1. 사연 본문 (상황 전개) -->
-            <div class="story-intro">
-                <p>FA 대박 터뜨리더니 눈에 뵈는 게 없어진 건가? 프로야구 최다안타 타이틀 경쟁 중에 볼넷으로 출루한 선수가 화를 참지 못하고 방망이랑 타격 장비를 볼보이 쪽으로 집어던지는 미친 태도 논란이 터짐.</p><p>가만히 있던 볼보이는 영문도 모른 채 날아온 장비 세례를 맞을 뻔했고, 이걸 본 베테랑 주장은 선수들을 다 불러 모아서 "자기 기록 채우려고 기어 나왔냐"라며 쌍욕 섞인 공개 질책을 날리면서 더그아웃은 한순간에 얼어붙음.</p>
-            </div>
-
-            <!-- 2. 결말 블러 가림막 섹션 (Curiosity Gap 극대화) -->
-            <div class="spoiler-blur-container">
-                <div class="blur-backdrop">
-                    <p>경기 끝나고 고개 숙여 사과하러 갔더니 볼보이가 꺼낸 예상밖의 반응은?</p>
-                    <p>단 2개 차이로 벌어진 최다안타 타이틀 경쟁의 최종 결말은 상상도 못 했습니다</p>
-                </div>
-                <div class="blur-overlay-card">
-                    <div class="lock-pill">
-                        <span class="lock-icon">🔒</span>
-                        <span>스포일러 방지 · 결말 가림 처리됨</span>
-                    </div>
-                    <h3 class="lock-title">가장 중요한 후속 결말과 대화 내용이 가려져 있습니다</h3>
-                    <p class="lock-desc">원문 기사에서 결말과 실제 현장/카톡 캡처 전체를 확인하실 수 있습니다</p>
-                    <a href="https://www.newspic.kr/view.html?nid=2026101208180041239&pn=618&cp=E9SeS81q&utm_medium=affiliate&utm_campaign=2026101208180041239&channelName=%EB%A9%94%EC%9D%B8&channelNo=1&sharedFrom=M-P-L&utm_source=np260811E9SeS81q" target="_blank" rel="noopener noreferrer" class="unlock-btn">
-                        <span>👉 전체 결말 및 상세 내막 보기 ➔</span>
-                        <span class="btn-arrow">➔</span>
-                    </a>
-                    <span class="unlock-note">언론사 제휴 공식 페이지(뉴스픽)로 연결됩니다</span>
-                </div>
-            </div>
-
-            <!-- 실시간 화제의 다른 이슈 추천 -->
-            <div class="related-issues-container">
-                <div class="related-header">
-                    <span class="related-badge">🔥 실시간 화제의 이슈</span>
-                    <span class="related-sub">지금 가장 많이 보고 있는 뉴스</span>
-                </div>
-                <div class="related-cards-list" id="relatedCardsList">
-                    <a href="/" class="related-more-link" style="text-align: center; font-size: 0.82rem; color: #64748b; font-weight: 600; text-decoration: none; padding-top: 6px; display: block;">
-                        ⚡ 실시간 최신 뉴스 전체 목록 보기 ➔
-                    </a>
-                </div>
-            </div>
-
-            <!-- Source Citation & Partner Disclosure -->
-            <div class="source-box">
-                출처: <strong>위키트리</strong> 보도 인용 &bull; 
-                <a href="https://www.newspic.kr/view.html?nid=2026101208180041239&pn=618&cp=E9SeS81q&utm_medium=affiliate&utm_campaign=2026101208180041239&channelName=%EB%A9%94%EC%9D%B8&channelNo=1&sharedFrom=M-P-L&utm_source=np260811E9SeS81q" target="_blank" rel="noopener noreferrer">원문 기사 전체보기</a>
-            </div>
-            <div class="partner-disclosure">
-                본 브리핑은 사실 확인을 돕기 위해 AI 요약 정보와 언론사 원문 링크를 제공하며, 뉴스픽 파트너스 활동의 일환으로 수수료를 제공받을 수 있습니다.
-            </div>
-        </article>
-    </div>
-
-    <!-- Floating Sticky Bottom Bar (Mobile) -->
-    <div class="sticky-bar">
-        <div class="sticky-info">
-            <span class="sticky-title">🔒 후속 결말 및 전체 사연</span>
-            <span class="sticky-sub">원문에서 전체 대화 확인</span>
+    <!-- 메인 단일 카드 (잡다한 배너/상단바/추천뉴스 완전 제거) -->
+    <main class="card">
+        <div class="top-meta">
+            <span class="tag-pill">🔥 화제의 썰</span>
+            <span class="date-text">2026-10-12 08:18:00</span>
         </div>
-        <a href="https://www.newspic.kr/view.html?nid=2026101208180041239&pn=618&cp=E9SeS81q&utm_medium=affiliate&utm_campaign=2026101208180041239&channelName=%EB%A9%94%EC%9D%B8&channelNo=1&sharedFrom=M-P-L&utm_source=np260811E9SeS81q" target="_blank" rel="noopener noreferrer" class="sticky-btn">
-            결말 보기 ➔
+
+        <h1 class="title">야구장서 볼보이한테 장비 집어던진 스타, 결국?</h1>
+
+        <div class="thumb-wrap"><img src="https://images-cdn.newspic.kr/thumb3/2026/10/11/435385d7-066b-40b2-ad97-43d7931ff19f.jpg" alt="야구장서 볼보이한테 장비 집어던진 스타, 결국?" loading="lazy"></div>
+
+        <!-- 초단문 핵심 훅 (읽자마자 결말이 궁금해지는 2~3줄) -->
+        <div class="story-hook">
+            FA 대박 터뜨리더니 눈에 뵈는 게 없어진 건가. 프로야구 최다안타 타이틀 경쟁 중에 볼넷으로 출루한 선수가 화를 참지 못하고 방망이랑 타격 장비를 볼보이 쪽으로 집어던지는 미친 태도 논란이 터짐.
+        </div>
+
+        <!-- 블러 가림막 & 단 하나의 명확한 언락 버튼 -->
+        <div class="blur-box">
+            <div class="blur-text">
+                <p>경기 끝나고 고개 숙여 사과하러 갔더니 볼보이가 꺼낸 예상밖의 반응은?</p>
+                <p>단 2개 차이로 벌어진 최다안타 타이틀 경쟁의 최종 결말은 상상도 못 했습니다</p>
+            </div>
+            <div class="blur-mask">
+                <div class="lock-badge">
+                    <span>🔒 결말 및 후속 내용 가림</span>
+                </div>
+                <div class="lock-msg">가장 중요한 후속 결말이 가려져 있습니다</div>
+                
+                <a href="https://www.newspic.kr/view.html?nid=2026101208180041239&pn=618&cp=E9SeS81q&utm_medium=affiliate&utm_campaign=2026101208180041239&channelName=%EB%A9%94%EC%9D%B8&channelNo=1&sharedFrom=M-P-L&utm_source=np260811E9SeS81q" target="_blank" rel="noopener noreferrer" class="btn-unlock">
+                    <span>👉 전체 결말 및 상세 내막 보기 ➔</span>
+                    <span class="arrow">➔</span>
+                </a>
+                <span class="btn-subtext">언론사 원문 기사에서 전체 확인</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- 하단 심플 고지 -->
+    <footer class="footer-note">
+        출처: 위키트리 &bull; 뉴스픽 파트너스 활동의 일환으로 수수료를 제공받을 수 있습니다.
+    </footer>
+
+    <!-- 모바일 하단 플로팅 단일 바 -->
+    <div class="bottom-sticky">
+        <a href="https://www.newspic.kr/view.html?nid=2026101208180041239&pn=618&cp=E9SeS81q&utm_medium=affiliate&utm_campaign=2026101208180041239&channelName=%EB%A9%94%EC%9D%B8&channelNo=1&sharedFrom=M-P-L&utm_source=np260811E9SeS81q" target="_blank" rel="noopener noreferrer" class="sticky-btn-full">
+            <span>👉 전체 결말 및 상세 내막 보기 ➔</span>
+            <span>➔</span>
         </a>
     </div>
 
-    <footer>
-        <p>&copy; 2026 ISSUE HUB. All rights reserved.</p>
-        <p style="margin-top: 5px; font-size: 0.72rem;">본 서비스는 언론사 및 커뮤니티 주요 화제의 내용을 요약하여 제공하며 저작권은 각 언론사 및 원작성자에게 있습니다.</p>
-    </footer>
-
-    <script>
-    function shareArticle() {
-        if (navigator.share) {
-            navigator.share({
-                title: document.title,
-                url: window.location.href
-            }).catch(() => {});
-        } else {
-            navigator.clipboard.writeText(window.location.href).then(() => {
-                const toast = document.getElementById("copyToast");
-                toast.classList.add("show");
-                setTimeout(() => toast.classList.remove("show"), 2000);
-            });
-        }
-    }
-    </script>
 </body>
 </html>
